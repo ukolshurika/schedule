@@ -1,0 +1,53 @@
+@font-face
+  font-family: intro
+  src: url('intro.woff')
+@font-face
+  font-family: roboto
+  src: url('roboto.woff')
+h1
+  font-family: intro
+  text-transform: uppercase
+.page-header
+  margin: 70px 0 37px
+.schedule
+  .day-of-week
+    font-family: intro
+    text-align: center
+    font-size: x-large
+  .cell
+    @media (min-width: 1200px)
+      min-height: 110px
+    margin: 5px 0
+    font-size: 12px
+    hr
+      border: none
+      margin-top: 0
+      margin-bottom: 0
+      width: 100%
+      height: 5px
+      background-color: Brown
+    .full-pair
+      min-height: 110px 
+    .half-pair
+      min-height: 52px
+  .no-cells
+    @extend .cell
+    min-height: 100%
+    padding: 15px
+  .info
+    padding-left: 10px
+    padding-right: 10px
+    span.time
+      font-family: intro
+    span.type
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+      font-weight: bold
+    span.name
+      font-family: roboto
+      text-align: left
+    span.room
+      font-family: roboto
+    span.lecturer
+      font-style: italic
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+      font-weight: normal

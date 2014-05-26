@@ -1,0 +1,11 @@
+-pair = locals[:pair]
+%div.info.half-pair{class: "bg-#{pair[:klass]}"}
+  .row.info
+    %span.pull-left.time #{pair[:time]}
+    %span.pull-right
+      %span.type  #{pair[:type_name]}
+      %span.room #{pair[:room]}
+  .row.info
+    %span.pull-left.name #{pair[:name]}
+    %span.pull-right
+      %span.lecturer= pair[:teacher]

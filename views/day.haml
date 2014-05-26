@@ -1,0 +1,16 @@
+.col-lg-2
+  .day-of-week
+    = locals[:day]
+    -if locals[:pairs].empty?
+      .no-cells.bg-primary Занятий нет
+    -locals[:pairs].each do |pair|
+      .cell
+        -if pair[:type] == 0
+          .full-pair{class: "bg-#{pair[:klass]}"}
+            = haml :pair, locals: {pair: pair}
+        -if pair[:type] == 1
+          .half-pair
+            = haml :pair, locals: {pair: pair[:up]}
+          %hr
+          .half-pair
+            = haml :pair, locals: {pair: pair[:down]}

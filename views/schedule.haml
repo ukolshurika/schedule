@@ -1,0 +1,51 @@
+!!!
+%html{lang: 'ru'}
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
+    %meta{name: 'description', content: 'РАСПИСАНИЕ ЗАНЯТИЙ ГРУППЫ 2321'}
+    %title РАСПИСАНИЕ
+    %link{href: '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel: 'stylesheet'}
+    %link{href: '/schedule.css', rel: 'stylesheet'}
+  %body
+    .container-fluid
+      .row-fluid
+        .col-lg-12
+          .page-header
+            %h1 Расписание занятий группы 2321
+      .row-fluid.schedule
+        = haml :day, locals: { day: "ПОНЕДЕЛЬНИК", 
+                              pairs: [{up: {name: "ТКМ", klass: 'warning', room: 1318, teacher: "Парфеновская O.A.", time: "10:00-12:25", type_name: "лаб"}, type: 1, 
+                              down: {name: "Ин. яз.", klass: 'success', room: "", teacher: "Любимова Т.Д.", time: "10:00-12:25", type_name: "сем"}}, 
+                              {name: "Инженерная графика 1", klass: 'success', room: 3412, teacher: "Акимкина Г.И.", time: "12:55-14:30", type_name: "сем", type: 0},
+                              {name: "Математика", klass: 'success', room: 2505, teacher: "Архангельский А.И.", time: "14:40-16:15", type_name: "сем", type: 0},
+                              {up:{name: "Физика", klass: 'warning', room: 1517, teacher: "Скобелев В.В.", time: "16:25-18:00", type_name: "лаб"}, type: 1,
+                              down: {name: "Практ. занятия по физике", klass: 'success', room: 1502, teacher: "Скобелев В.В.", time: "16:25-18:00", type_name: "сем"}} ]}
+        = haml :day, locals: { day: "ВТОРНИК", 
+                              pairs: [{name: "Физ. культура", klass: 'success', room: "", teacher: " Александрова Г.А.", time: "10:00-12:25", type_name: "сем", type: 0}, 
+                              {name: "Инф. и информ.- коммуникац.тех.", klass: 'success', room: 1201, teacher: " Симакова Т.Б.", time: "12:55-14:30", type_name: "сем", type: 0},
+                              {up: {name: "Материаловедение", klass: 'info', room: 2414, teacher: "Курбатова И.А.", time: "14:40-16:15", type_name: "лек"}, type: 1, 
+                              down: {name: "Ин. яз.", klass: 'success', room: 1318, teacher: "Любимова Т.Д.", time: "14:40-16:15", type_name: "сем"}},
+                              {up: {name: "Практ. занятия по матер.", klass: 'success', room: 1316, teacher: "Курбатова И.А.", time: "16:25-18:00", type_name: "лаб"}, type: 1,
+                              down: {name: "Материаловедение", klass: 'warning', room: 1304, teacher: "Курбатова И.А.", time: "16:25-18:00", type_name: "лаб"}} ]}
+        = haml :day, locals: { day: "СРЕДА",
+                              pairs: [{up: {name: "Органическая химия", klass: 'info', room: 1510, teacher: "Хайри А.Х.", time: "10:00-12:25", type_name: "лек"}, type: 1, 
+                              down: {name: "Органическая химия", klass: 'success', room: 1511, teacher: "Хайри А.Х.", time: "10:00-12:25", type_name: "сем"}}, 
+                              {up: {name: "РГР по математике", klass: 'success', room: 2610, teacher: "Архангельский А.И.", time: "12:55-14:30", type_name: "сем"}, type: 1, 
+                              down: {name: "Математика", klass: 'info', room: 1510, teacher: "Архангельский А.И.", time: "12:55-14:30", type_name: "лек"}},
+                              {up:{}, type: 1,
+                              down: {name: "Философия", klass: 'success', room: 5303, teacher: "Поздняков М.В.", time: "14:40-16:15", type_name: "сем"}} ]}
+        = haml :day, locals: { day: "ЧЕТВЕРГ",
+                              pairs: [{up: {name: "ТКМ", klass: 'info', room: 1706, teacher: "Парфеновская О.А.", time: "10:00-12:25", type_name: "лек"}, type: 1, 
+                              down: {name: "ТКМ", klass: 'success', room: 1318, teacher: "Парфеновская О.А.", time: "10:00-12:25", type_name: "сем"}}, 
+                              {up: {name: "Философия", klass: 'info', room: 5405, teacher: "Поздняков М.В.", time: "12:55-14:30", type_name: "лек"}, type: 1, 
+                              down: {name: "Физика", klass: 'info', room: 1410, teacher: "Галстян И.Л.", time: "12:55-14:30", type_name: "лек"}},
+                              {up:{name: "Ин. яз.", klass: 'success', room: 1318, teacher: "Любимова Т.Д.", time: "14:40-16:15", type_name: "сем"}, type: 1,
+                              down: {name: "Физика", klass: 'success', room: 1410, teacher: "Галстян И.Л.", time: "12:55-14:30", type_name: "сем"}} ]}
+        = haml :day, locals: { day: "ПЯТНИЦА", 
+                              pairs: [{name: "Физ. культура", klass: 'success', room: "", teacher: " Александрова Г.А.", time: "10:00-12:25", type_name: "сем", type: 0}, 
+                              {name: "Геометр.моделир.в машиностр.", klass: 'success', room: 3404, teacher: "  Акимкина Г.И.", time: "12:55-14:30", type_name: "сем", type: 0},
+                              {up: {}, type: 1, 
+                              down: {name: "Инженерная графика 1", klass: 'success', room: 3412, teacher: "Акимкина Г.И.", time: "14:40-16:15", type_name: "сем"}},
+                              ]}
+        = haml :day, locals: { day: "СУББОТА", pairs: []}
